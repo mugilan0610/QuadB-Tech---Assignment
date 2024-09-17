@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="theme-dark" style="padding-bottom: 47px">
+      <header style="padding: 20px 30px 0px">
+        <div class="navbar ">
+          <div class="nav-item">
+            <a href="/">
+              <div class="logo">
+                <img
+                  src="./static/HODLINFO.8f78fc06.png"
+                  alt=""
+                  style="padding: 10px; width: 80%"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="nav-button">
+            <div class="btn-group">
+              <div class="dropdown fiat-dropdown">
+                <button
+                  class="header-button dropdown-toggle btn-secondary"
+                  aria-expanded="false"
+                  id="fiatDropdown"
+                >
+                  INR
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div
+                  tabindex="-1"
+                  role="menu"
+                  aria-hidden="true"
+                  class="dropdown-menu"
+                  aria-labelledby="fiatDropdown"
+                >
+                  <!-- Fiat dropdown items will be added here dynamically -->
+                </div>
+              </div>
+            </div>
+            <div class="btn-group">
+              <div class="dropdown crypto-dropdown">
+                <button
+                  class="header-button dropdown-toggle btn-secondary"
+                  aria-expanded="false"
+                  id="cryptoDropdown"
+                >
+                  BTC
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div
+                  tabindex="-1"
+                  role="menu"
+                  aria-hidden="true"
+                  class="dropdown-menu"
+                  aria-labelledby="cryptoDropdown"
+                >
+                  <!-- Crypto dropdown items will be added here dynamically -->
+                </div>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="header-button" id="buyButton">Buy BTC</button>
+            </div>
+          </div>
+          <div class="right_side">
+            <div class="progress-bar-wrapper">
+              <svg
+                class="CircularProgressbar"
+                viewBox="0 0 100 100"
+                data-test-id="CircularProgressbar"
+              >
+                <path
+                  class="CircularProgressbar-trail"
+                  d="
+                        M 50,50
+                        m 0,-46
+                        a 46,46 0 1 1 0,92
+                        a 46,46 0 1 1 0,-92
+                    "
+                  stroke-width="8"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 289.027px, 289.027px;
+                    stroke-dashoffset: 0;
+                  "
+                ></path>
+                <path
+                  class="CircularProgressbar-path"
+                  d="
+                        M 50,50
+                        m 0,-46
+                        a 46,46 0 1 1 0,92
+                        a 46,46 0 1 1 0,-92
+                    "
+                  stroke-width="8"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 289.027px, 289.027px;
+                    stroke-dashoffset: 0;
+                  "
+                ></path>
+                <text class="CircularProgressbar-text" x="50" y="50" dy="0.3em">
+                  60
+                </text>
+              </svg>
+            </div>
+
+            <button type="button" class="btn_group2 btn">
+              <i class="bi bi-telegram"></i> Connect Telegram
+            </button>
+
+            <div class="toggleButton">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container">
+          <div class="text-center">
+            <h4 class="subtitle">Best Price To Trade</h4>
+          </div>
+      
+          <div class="grid">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-inner">
+                  <h4 class="card-title">0.1 %</h4>
+                  <p class="card-subtitle">5 Min</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-content">
+                <h4 class="card-title">0.9 %</h4>
+                <p class="card-subtitle">1 Hour</p>
+              </div>
+            </div>
+      
+            <div class="card col-span-2">
+              <div class="card-content">
+                <div class="card-inner">
+                  <h4 class="price">₹ 26,56,110</h4>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-content">
+                <div class="card-inner">
+                  <h4 class="card-title">2.73%</h4>
+                  <p class="card-subtitle">1 Day</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-content">
+                <div class="card-inner">
+                  <h4 class="card-title">7.51%</h4>
+                  <p class="card-subtitle">7 Days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="average-price">Average BTC/INR net price including Commission</p>
+        </div>
+      </section>
+      
+
+
+      <section class = section2>
+        <table class=table1 id="dynamicTable">
+            <thead>
+                <tr>
+                    <th><h4><span class="pointer">#</span></h4></th>
+                    <th><h4><span class="pointer">Platfom</span></h4></th>
+                    <th><h4><span class="pointer">Last Traded Price</span></h4></th>
+                    <th><h4><span class="pointer">Buy / Sell Price</span></h4></th>
+                    <th><h4><span class="pointer">Difference</span></h4></th>
+                    <th><h4><span class="pointer">Savings</span></h4></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+        
+            </tbody>
+        </table>
+        </section>
+
+      <footer>
+        
+          <div>Copyright © 2019 HodlInfo.com</div>
+          <div>Support</div>
+       
+      </footer>
+    </div>
+    <div
+      class="add_to_home_screen"
+      style="
+        border: solid 1px #191d28;
+        background-color: #191d28;
+        position: fixed;
+        left: 0;
+        align-items: center;
+        width: 100vw;
+        height: 47px;
+        bottom: 0;
+        z-index: 8;
+      "
+    >
+      <button class="btn btn-outline-info" style="display: block">
+        Add hodlinfo to home screen
+      </button>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
